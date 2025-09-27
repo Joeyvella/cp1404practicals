@@ -13,4 +13,3 @@ def get_password(min_length):
 def print_stars(password):
     print("*" * len(password))
 main()
-
