@@ -8,5 +8,9 @@
 #Results for line 3,(2.555930763954662, 4.692903441503153, 3.999844785777401, 2.8269971394339515)
 # the smallest number would be 2.5 with the largest being 5.5
 
+"""Code that chooses a random number between 1 and 100 inclusively"""
 import random
-print(random.randint(1,100))
+
+number = random.randint(1, 100)
+
+print(number)
