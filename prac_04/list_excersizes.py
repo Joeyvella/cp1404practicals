@@ -17,3 +17,24 @@ def main():
     print(f"The average of the numbers is {sum(numbers) / len(numbers):.1f}")
 
 main()
+
+"""
+CP1404/CP5632 Practical
+Woefully inadequate security checker
+"""
+
+def main():
+    # List of authorised users
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye',
+                 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+                 'Command', 'ExecState', 'InteractiveConsole',
+                 'InterpreterInterface', 'StartServer', 'bob']
+
+    username = input("Enter your username: ")
+
+    if username in usernames:
+        print("Access granted")
+    else:
+        print("Access denied")
+
+main()
