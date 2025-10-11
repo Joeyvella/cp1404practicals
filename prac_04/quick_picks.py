@@ -27,3 +27,11 @@ def generate_quick_pick(numbers_per_line, min_number, max_number):
             pick.append(number)
     pick.sort()
     return pick
+
+
+def display_pick(pick):
+    """Display one quick pick formatted neatly."""
+    print(" ".join(f"{num:2}" for num in pick))
+
+
+main()
