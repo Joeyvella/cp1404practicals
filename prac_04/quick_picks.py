@@ -16,3 +16,14 @@ def main():
     for i in range(quick_picks):
         pick = generate_quick_pick(numbers_per_line, min_number, max_number)
         display_pick(pick)
+
+
+def generate_quick_pick(numbers_per_line, min_number, max_number):
+    """Generate a single quick pick with unique random numbers."""
+    pick = []
+    while len(pick) < numbers_per_line:
+        number = random.randint(min_number, max_number)
+        if number not in pick:
+            pick.append(number)
+    pick.sort()
+    return pick
