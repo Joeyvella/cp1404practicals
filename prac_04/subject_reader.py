@@ -7,12 +7,31 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = load_data(FILENAME)
-    print(data)
+    """Loads in subject records and prints a formatted report"""
+    subjects = load_data(FILENAME)
+    display_subjects(subjects)
 
 
 def load_data(filename=FILENAME):
     """Read data from file formatted like: subject,lecturer,number of students."""
+
+    subjects = []
+    with open(filename) as input_file
+        for line in input_file:
+            line = line.strip()
+            subject_code, lecturer, count_str = line.split(",")
+            student_count = int(count_str)
+            subjects.append([subject_code, lecturer, student_count])
+    return subjects
+
+
+def display_subjects(subjects):
+    """Prints line that describes the records"""
+    for subject_code, lecturer, student_count in subjects:
+        print(f"{subject_code} is taught by {lecturer} and has {student_count} students")
+
+
+
     input_file = open(filename)
     for line in input_file:
         print(line)  # See what a line looks like
