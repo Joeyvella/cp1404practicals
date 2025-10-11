@@ -23,7 +23,11 @@ def load_subjects(filename=FILENAME):
     return subjects
 
 
-
+def display_subjects(subjects):
+    """will display the data clearly"""
+    for subject in subjects:
+        code, lecturer, student_count = subject
+        print(f"{code} is taught by {lecturer} and has {student_count} students")
 
 
 
