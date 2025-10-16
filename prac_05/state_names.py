@@ -9,7 +9,7 @@ state_name = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Ter
                 "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania", "SA": "South Australia"}
 print(state_name)
 
-state_code = input("Enter short state: ")
+state_code = input("Enter short state: ").upper()
 while state_code != "":
     if state_code in state_name:
         print(state_code, "is", state_name[state_code])
