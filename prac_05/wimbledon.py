@@ -35,6 +35,7 @@ def count_champions(data):
             champion_to_count[champion] = 1
     return champion_to_count
 
+
 def get_countries(data):
     """Return a sorted list of unique countries."""
     countries = set()
