@@ -20,7 +20,7 @@ state_code = input("Enter short state: ").strip().upper()
 while state_code != "":
     try:
         print(f"{state_code} is {code_to_state[state_code]}")
-        except KeyError:
+    except KeyError:
         print("Invalid short state")
     state_code = input("Enter short state: ").strip().upper()
 
