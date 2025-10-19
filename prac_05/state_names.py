@@ -27,3 +27,14 @@ while state_code != "":
 print("\nAll states and names:")
 for code, name in code_to_state.items():
     print(f"{code:3} is {name}")
+
+def search_loop(code_to_name):
+    """Ask for state code and print using EAFP."""
+    code = input("Enter short state: ").strip().upper()
+    while code != "":
+        try:
+            print(f"{code} is {code_to_name[code]}")
+        except KeyError:
+            print("Invalid short state")
+        code = input("Enter short state: ").strip().upper()
+
