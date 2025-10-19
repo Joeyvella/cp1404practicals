@@ -14,27 +14,26 @@ code_to_state = {
     "VIC": "Victoria", "TAS": "Tasmania",
     "SA": "South Australia"
 }
-print(code_to_state)
 
-state_code = input("Enter short state: ").strip().upper()
-while state_code != "":
-    try:
-        print(f"{state_code} is {code_to_state[state_code]}")
-    except KeyError:
-        print("Invalid short state")
-    state_code = input("Enter short state: ").strip().upper()
-
-print("\nAll states and names:")
-for code, name in code_to_state.items():
-    print(f"{code:3} is {name}")
-
-def search_loop(code_to_name):
+def search_loop(code_to_state):
     """Ask for state code and print using EAFP."""
     code = input("Enter short state: ").strip().upper()
     while code != "":
         try:
-            print(f"{code} is {code_to_name[code]}")
+            print(f"{code} is {code_to_state[code]}")
         except KeyError:
             print("Invalid short state")
         code = input("Enter short state: ").strip().upper()
 
+def print_states_neatly(code_to_state):
+    """Print the dictionary as a neat two column table."""
+    code_w = max(len(code) for code in code_to_state)
+    name_w = max(len(name) for name in code_to_state.values())
+
+    print("\nAll states and names:")
+    for code, name in code_to_state.items():
+        print(f"{code:<{code_w}}  is  {name:<{name_w}}")
+
+
+search_loop(code_to_state)
+print_states_neatly(code_to_state)
