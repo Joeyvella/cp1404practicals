@@ -12,4 +12,4 @@ while not is_finished:
     except ValueError:
         print("Please enter a valid integer.")
 
-print("Valid result is:", result)
+print(f"{}")
