@@ -4,13 +4,19 @@ State names in a dictionary
 File needs reformatting
 """
 
-# TODO: Reformat this file so the dictionary code follows PEP 8 convention
-code_to_state = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
-                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania", "SA": "South Australia"}
+
+code_to_state = {
+    "QLD": "Queensland",
+    "NSW": "New South Wales",
+    "NT": "Northern Territory",
+    "WA": "Western Australia",
+    "ACT": "Australian Capital Territory",
+    "VIC": "Victoria", "TAS": "Tasmania",
+    "SA": "South Australia"
+}
 print(code_to_state)
 
 state_code = input("Enter short state: ").strip().upper()
-
 while state_code != "":
     try:
         print(f"{state_code} is {code_to_state[state_code]}")
@@ -18,3 +24,6 @@ while state_code != "":
         print("Invalid short state")
     state_code = input("Enter short state: ").strip().upper()
 
+print("\nAll states and names:")
+for code, name in code_to_state.items():
+    print(f"{code:3} is {name}")
