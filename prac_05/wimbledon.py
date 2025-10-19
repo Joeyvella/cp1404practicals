@@ -34,3 +34,31 @@ def count_champions(data):
         else:
             champion_to_count[champion] = 1
     return champion_to_count
+
+def get_countries(data):
+    """Return a sorted list of unique countries."""
+    countries = set()
+    for record in data:
+        country = record[1]
+        countries.add(country)
+    return sorted(countries)
+
+
+def display_champions(champion_to_count):
+    """Display champions and their number of wins."""
+    print("Wimbledon Champions:")
+    for champion, wins in champion_to_count.items():
+        print(f"{champion:20} {wins}")
+
+
+def display_countries(countries):
+    """Display countries in alphabetical order."""
+    print()
+    print(f"These {len(countries)} countries have won Wimbledon:")
+    print(", ".join(countries))
+
+
+main()
+
+
+
