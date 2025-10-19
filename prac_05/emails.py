@@ -2,6 +2,7 @@
 CP1404/CP5632 Practical
 Emails to names dictionary program
 Estimate time: 15 minutes
+Actual time: 10
 """
 
 def main():
@@ -23,3 +24,15 @@ def main():
     print()
     for email, name in email_to_name.items():
         print(f"{name} ({email})")
+
+
+
+def extract_name(email):
+    """Extract a name from the email address."""
+    name_part = email.split('@')[0]
+    parts = name_part.replace('.', ' ').split()
+    name = ' '.join(word.title() for word in parts)
+    return name
+
+
+main()
