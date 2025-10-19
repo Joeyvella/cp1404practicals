@@ -5,14 +5,16 @@ File needs reformatting
 """
 
 # TODO: Reformat this file so the dictionary code follows PEP 8 convention
-state_name = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
+code_to_state = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
                 "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania", "SA": "South Australia"}
-print(state_name)
+print(code_to_state)
 
-state_code = input("Enter short state: ").upper()
+state_code = input("Enter short state: ").strip().upper()
+
 while state_code != "":
-    if state_code in state_name:
-        print(state_code, "is", state_name[state_code])
-    else:
+    try:
+        print(f"{state_code} is {code_to_state[state_code]}")
+        except KeyError:
         print("Invalid short state")
-    state_code = input("Enter short state: ")
+    state_code = input("Enter short state: ").strip().upper()
+
