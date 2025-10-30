@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Quick Pick Lottery Ticket Generator (no global variables)
+Quick Pick Lottery Ticket Generator
 """
 
 import random
@@ -19,7 +19,7 @@ def main():
 
 
 def generate_quick_pick(numbers_per_line, min_number, max_number):
-    """Generate a single quick pick with unique random numbers."""
+    """Generates a single quick pick with numbers."""
     pick = []
     while len(pick) < numbers_per_line:
         number = random.randint(min_number, max_number)
@@ -30,7 +30,7 @@ def generate_quick_pick(numbers_per_line, min_number, max_number):
 
 
 def display_pick(pick):
-    """Display one quick pick formatted neatly."""
+    """Displays one number that is lined up"""
     print(" ".join(f"{num:2}" for num in pick))
 
 
