@@ -16,7 +16,7 @@ Attending the seminars each week to gain a better understanding of the lectures.
 
 ## What do you need to stop or change in your work for this subject overall so far?
 
-I need to chnage how much time I give myself for lecture tasks to come to each seminar more prepared.
+I need to change how much time I give myself for lecture tasks to come to each seminar more prepared.
 
 ## What is one request you have or change you suggest for this subject and/or your IT degree overall?
 
