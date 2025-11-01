@@ -9,6 +9,7 @@ class Car:
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.car = Car
         self.fuel = fuel
         self._odometer = 0
 
@@ -29,3 +30,8 @@ class Car:
             self.fuel -= distance
         self._odometer += distance
         return distance
+
+    def __str__(self):
+        """Return a string representation of the car"""
+        return f"car, fuel={self.fuel}, odometer={self._odometer}"
+
