@@ -1,0 +1,22 @@
+"""
+CP1404/CP5632 Practical
+Guitars program
+Estimate: 30 minutes
+Actual:
+"""
+from guitar import Guitar
+
+
+def main():
+    """Program to store user's guitars and display details."""
+    guitars = []
+
+    print("My guitars!")
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+        print(f"{guitar} added.\n")
+        name = input("Name: ")
