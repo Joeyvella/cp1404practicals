@@ -17,3 +17,11 @@ class Guitar:
         """Return a nicely formatted guitar string."""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
+    def get_age(self):
+        """Return how old the guitar is in years."""
+        CURRENT_YEAR = 2025
+        return CURRENT_YEAR - self.year
+
+    def is_vintage(self):
+        """Return True if the guitar is 50 or more years old."""
+        return self.get_age() >= 50
