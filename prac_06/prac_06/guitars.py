@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Guitars program
 Estimate: 30 minutes
-Actual:
+Actual:40
 """
 from guitar import Guitar
 

@@ -1,9 +1,11 @@
 """
-CP1404/CP5632 Practical
 Guitar class
 Estimate: 20
-Actual:
+Actual:40
 """
+
+CURRENT_YEAR = 2025
+
 class Guitar:
     """Represent a Guitar object."""
 
@@ -19,7 +21,6 @@ class Guitar:
 
     def get_age(self):
         """Return how old the guitar is in years."""
-        CURRENT_YEAR = 2025
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
