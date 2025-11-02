@@ -12,3 +12,5 @@ def main():
 
     print("Gibson L-5 CES is_vintage() - Expected True. Got", gibson.is_vintage())
     print("Another Guitar is_vintage() - Expected False. Got", another.is_vintage())
+
+main()
