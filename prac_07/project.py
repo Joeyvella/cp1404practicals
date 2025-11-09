@@ -1,5 +1,5 @@
 """CP1404/CP5632 Practical – Project class
-Estimate: 45 min | Actual: ___ min
+Estimate: 45 min | Actual: 30 min
 """
 
 from datetime import datetime

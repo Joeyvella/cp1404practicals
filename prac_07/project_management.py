@@ -1,5 +1,5 @@
 """CP1404/CP5632 Practical - Project Management
-Estimate: 90 min | Actual: ___ min
+Estimate: 90 min | Actual: 1:45 hour
 """
 
 from datetime import datetime
@@ -76,16 +76,16 @@ def save_projects(filename, projects):
 
 def display_projects(projects):
     """Display projects grouped by completion status."""
-    incomplete = [p for p in projects if not p.is_complete()]
-    complete = [p for p in projects if p.is_complete()]
+    incomplete = [project for project in projects if not project.is_complete()]
+    complete = [project for project in projects if project.is_complete()]
 
     print("Incomplete projects:")
-    for p in sorted(incomplete):
-        print(f"  {p}")
+    for project in sorted(incomplete):
+        print(f"  {project}")
 
     print("Completed projects:")
-    for p in sorted(complete):
-        print(f"  {p}")
+    for project in sorted(complete):
+        print(f"  {project}")
 
 def filter_projects_by_date(projects):
     """Display projects that start after a user-specified date."""
