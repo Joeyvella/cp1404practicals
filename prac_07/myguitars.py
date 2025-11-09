@@ -17,3 +17,17 @@ def main():
         name = parts[0]
         year = int(parts[1])
         cost = float(parts[2])
+
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+
+    in_file.close()
+    guitars.sort()
+
+    print("These are my guitars sorted by year:")
+    for guitar in guitars:
+        print(guitar)
+
+
+
+main()
