@@ -24,3 +24,24 @@ def main():
         "- (U)pdate project\n"
         "- (Q)uit"
     )
+
+    choice = input(MENU + "\n>>> ").lower()
+    while choice != "q":
+        if choice == "l":
+            filename = input("Filename to load projects from: ")
+            projects = load_projects(filename)
+        elif choice == "s":
+            filename = input("Filename to save projects to: ")
+            save_projects(filename, projects)
+        elif choice == "d":
+            display_projects(projects)
+        elif choice == "f":
+            filter_projects_by_date(projects)
+        elif choice == "a":
+            add_project(projects)
+        elif choice == "u":
+            update_project(projects)
+        else:
+            print("Invalid option")
+
+        choice = input(MENU + "\n>>> ").lower()
