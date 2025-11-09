@@ -29,3 +29,13 @@ class Project:
         return (f"{self.name}, start: {self.start_date.strftime(DATE_FMT)}, "
                 f"priority {self.priority}, estimate: ${self.cost_estimate:,.2f}, "
                 f"completion: {self.completion}%")
+
+
+    def from_row(self, row):
+        """Read data from a line in the file and update this Project’s attributes."""
+        name, date, priority, cost, completion = row
+        self.name = name.strip()
+        self.start_date = datetime.strptime(date.strip(), DATE_FMT)
+        self.priority = int(priority)
+        self.cost_estimate = float(cost)
+        self.completion = int(completion)
