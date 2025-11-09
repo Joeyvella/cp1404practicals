@@ -39,3 +39,12 @@ class Project:
         self.priority = int(priority)
         self.cost_estimate = float(cost)
         self.completion = int(completion)
+
+    def to_row(self):
+        """Return a list of strings to save this Project to a file."""
+        return [
+            self.name,
+            self.start_date.strftime(DATE_FMT),
+            str(self.priority),
+            f"{self.cost_estimate:.2f}",
+            str(self.completion)]
