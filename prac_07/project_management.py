@@ -6,4 +6,11 @@ from datetime import datetime
 from project import Project
 
 DATE_FMT = "%d/%m/%Y"
-DEFAULT_FILENAME = "projects.txt"
+FILENAME = "projects.txt"
+
+
+def main():
+    """Main menu for project management program."""
+    print("Welcome to Pythonic Project Management")
+    projects = load_projects(FILENAME)
+    print(f"Loaded {len(projects)} projects from {FILENAME}")
