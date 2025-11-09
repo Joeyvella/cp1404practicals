@@ -129,4 +129,5 @@ def update_project(projects):
         project.priority = int(new_priority)
 
 
-
+if __name__ == "__main__":
+    main()
