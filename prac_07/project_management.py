@@ -45,3 +45,23 @@ def main():
             print("Invalid option")
 
         choice = input(MENU + "\n>>> ").lower()
+
+    save_choice = input(f"Would you like to save to {FILENAME}? ").lower()
+    if save_choice in ["y", "yes"]:
+        save_projects(FILENAME, projects)
+    else:
+        print(f"Would you like to save to {FILENAME}? no, I think not.")
+    print("Thank you for using custom-built project management software.")
+
+
+def load_projects(filename):
+    """Load projects from a text file and return a list of Project objects."""
+    projects = []
+    with open(filename, "r", encoding="utf-8") as in_file:
+        in_file.readline()  # skip header
+        for line in in_file:
+            parts = line.strip().split("\t")
+            project = Project("", "", 0, 0.0, 0)
+            project.from_row(parts)
+            projects.append(project)
+    return projects
