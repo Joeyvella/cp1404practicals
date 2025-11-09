@@ -10,10 +10,8 @@ def main():
     in_file.readline()
 
     for line in in_file:
-        # print(repr(line))  # debugging
-        parts = line.strip().split(',')
-        # print(parts)       # debugging
 
+        parts = line.strip().split(',')
         name = parts[0]
         year = int(parts[1])
         cost = float(parts[2])
