@@ -73,3 +73,16 @@ def save_projects(filename, projects):
         out_file.write("Name\tStart Date\tPriority\tCost Estimate\tCompletion\n")
         for project in projects:
             out_file.write("\t".join(project.to_row()) + "\n")
+
+def display_projects(projects):
+    """Display projects grouped by completion status."""
+    incomplete = [p for p in projects if not p.is_complete()]
+    complete = [p for p in projects if p.is_complete()]
+
+    print("Incomplete projects:")
+    for p in sorted(incomplete):
+        print(f"  {p}")
+
+    print("Completed projects:")
+    for p in sorted(complete):
+        print(f"  {p}")
