@@ -23,3 +23,9 @@ class Project:
     def __lt__(self, other):
         """Compare Projects by priority (smaller number = higher priority)."""
         return self.priority < other.priority
+
+    def __str__(self):
+        """Return a formatted string for displaying a Project."""
+        return (f"{self.name}, start: {self.start_date.strftime(DATE_FMT)}, "
+                f"priority {self.priority}, estimate: ${self.cost_estimate:,.2f}, "
+                f"completion: {self.completion}%")
