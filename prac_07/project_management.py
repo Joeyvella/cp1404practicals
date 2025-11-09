@@ -65,3 +65,11 @@ def load_projects(filename):
             project.from_row(parts)
             projects.append(project)
     return projects
+
+
+def save_projects(filename, projects):
+    """Save all projects to a text file."""
+    with open(filename, "w", encoding="utf-8") as out_file:
+        out_file.write("Name\tStart Date\tPriority\tCost Estimate\tCompletion\n")
+        for project in projects:
+            out_file.write("\t".join(project.to_row()) + "\n")
