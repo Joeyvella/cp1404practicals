@@ -11,3 +11,16 @@ BoxLayout:
             multiline: False
             # Whenever the text changes, do a conversion
             on_text: app.handle_convert()
+
+        #Column with Up/Down buttons
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.3
+
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(1)
+
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(-1)
