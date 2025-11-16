@@ -39,3 +39,19 @@ class MilesToKilometresApp(App):
         self.root.ids.input_miles.text = str(miles)
         # Recalculate the output
         self.handle_convert()
+
+
+    def get_valid_miles(self):
+        """
+        Get the miles value from the TextInput.
+        If it is invalid or blank, treat it as 0.0 (no crash).
+        """
+        text = self.root.ids.input_miles.text
+        try:
+            value = float(text)
+        except ValueError:
+            value = 0.0
+        return value
+
+
+MilesToKilometresApp().run()
