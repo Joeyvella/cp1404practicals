@@ -26,3 +26,16 @@ class MilesToKilometresApp(App):
         kilometres = miles * MILES_TO_KM
         # Update the StringProperty, which updates the label automatically
         self.output_text = f"{kilometres:.5f}"
+
+
+    def handle_increment(self, change):
+        """
+        Change the miles value up or down by 'change' (an int, e.g. +1 or -1),
+        then convert again.
+        """
+        miles = self.get_valid_miles()
+        miles += change
+        # Put the new miles value back into the TextInput
+        self.root.ids.input_miles.text = str(miles)
+        # Recalculate the output
+        self.handle_convert()
