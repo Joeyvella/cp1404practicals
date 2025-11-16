@@ -10,7 +10,14 @@ class BoxLayoutDemo(App):
 
     def handle_greet(self):
         """Handle the greet button when pressed."""
-        name = self
+        name = self.root.ids.input_name.text
+        self.root.ids.output_label.text = f"Hello {name}"
+
+    def handle_clear(self):
+        """Handle the Clear button when pressed."""
+        self.root.ids.input_name.text = ""
+        self.root.ids.output_label.text = ""
+
 
 
 BoxLayoutDemo().run()
