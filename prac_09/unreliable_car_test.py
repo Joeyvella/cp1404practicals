@@ -20,3 +20,6 @@ def main():
     for attempt in range(10):
         distance = bad_car.drive(10)
         print(f"Attempt {attempt + 1}: Drove {distance} km")
+
+if __name__ == "__main__":
+    main()
