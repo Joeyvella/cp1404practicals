@@ -33,3 +33,18 @@ def main():
     print(f"Total trip cost: ${bill:.2f}")
     print("Taxis are now:")
     display_taxis(taxis)
+
+
+def choose_taxi(taxis):
+    """Let the user choose a taxi and return the chosen taxi object, or None."""
+    print("Taxis available:")
+    display_taxis(taxis)
+    try:
+        taxi_choice = int(input("Choose taxi: "))
+        if taxi_choice < 0 or taxi_choice >= len(taxis):
+            print("Invalid taxi choice")
+            return None
+        return taxis[taxi_choice]
+    except ValueError:
+        print("Invalid taxi choice")
+        return None
