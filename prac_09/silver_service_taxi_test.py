@@ -10,3 +10,12 @@ def main():
     expected_fare = 48.8
     actual_fare = hummer.get_fare()
 
+    print(hummer)
+    print(f"Fare: ${actual_fare:.2f}")
+
+    assert actual_fare == expected_fare, "Fare calculation is incorrect"
+
+
+if __name__ == "__main__":
+    main()
+
