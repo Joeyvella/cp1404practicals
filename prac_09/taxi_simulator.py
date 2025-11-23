@@ -58,3 +58,13 @@ def drive_taxi(taxi):
     trip_cost = taxi.get_fare()
     print(f"Your {taxi.name} trip cost you ${trip_cost:.2f}")
     return trip_cost
+
+
+def display_taxis(taxis):
+    """Display each taxi with its index."""
+    for taxi_number, taxi in enumerate(taxis):
+        print(f"{taxi_number} - {taxi}")
+
+
+if __name__ == "__main__":
+    main()
