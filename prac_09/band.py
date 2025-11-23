@@ -9,3 +9,11 @@ class Band:
         """Initialise a Band with a name and empty musician list."""
         self.name = name
         self.musicians = []
+
+    def __str__(self):
+        """Return string representation of Band: name (list of musicians)."""
+        return f"{self.name} ({self.musicians})"
+
+    def add(self, musician):
+        """Add a musician to the band."""
+        self.musicians.append(musician)
