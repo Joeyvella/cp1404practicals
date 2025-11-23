@@ -6,3 +6,7 @@ def main():
     hummer = SilverServiceTaxi("Hummer", 200, 2)
     hummer.drive(18)
 
+
+    expected_fare = 48.8
+    actual_fare = hummer.get_fare()
+
